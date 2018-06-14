@@ -8,7 +8,7 @@
 </head>
 <body>
 	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-	<div id="main" style="width: 600px; height: 400px;"></div>
+	<div id="main" style="width: 1200px; height: 600px;"></div>
 
 	<script type="text/javascript">
 		// 基于准备好的dom，初始化echarts实例
@@ -20,7 +20,8 @@
 
 		var data = [Math.random() * 150];
 		var now = new Date(base);
-
+		date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+		
 		function addData(shift) {
 		    now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/');
 		    date.push(now);
